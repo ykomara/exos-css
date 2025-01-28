@@ -1,0 +1,710 @@
+/* General setup */
+html {
+    font-family: "helvetica neue", helvetica, arial, sans-serif;
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    min-width: 1000px;
+    max-width: 1400px;
+    line-height: 1.5;
+}
+
+/* Layout */
+
+section {
+    float: left;
+    width: 50%;
+}
+
+aside {
+    float: left;
+    width: 30%;
+}
+
+nav {
+    float: left;
+    width: 20%;
+}
+
+footer {
+    clear: both;
+    display: inline-block;
+    place-items: center;
+}
+
+header,
+section,
+aside,
+nav,
+footer {
+    padding: 20px;
+}
+
+/* header and footer */
+
+header,
+footer {
+    border-top: 5px solid #a66;
+    border-bottom: 5px solid #a66;
+}
+
+/* WRITE YOUR CODE BELOW HERE */
+
+h2 {
+    font-size: 20px;
+
+}
+
+h1 {
+    text-align: center;
+}
+
+h1,
+h2 {
+    letter-spacing: 1.5px;
+    word-spacing: 1.5px;
+}
+
+section h2+p {
+    text-indent: 20px;
+
+}
+
+a:link {
+    color: #a66;
+}
+
+a:visited {
+    color: green;
+}
+
+a:hover {
+    text-decoration: none;
+
+}
+
+a:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+a:active {
+    color: #ffffff;
+    background-color: #0078d7;
+    text-decoration: underline;
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+
+a[target="_blank"]::after {
+    content: " ";
+    background: url(external-link-52.png) no-repeat center;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+    background-size: 1.6rem 1.6rem;
+}
+
+ul {
+    line-height: 2;
+    list-style-type: none;
+}
+
+ul li {
+    background-image: url(image.png);
+    background-repeat: no-repeat;
+    background-size: 1.6rem 1.6rem;
+    padding-left: 2rem;
+}
+
+nav ul li {
+    padding: 10px 20px;
+    border: 1px solid brown;
+    background-image: none;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+input:focus {
+    color: hotpink;
+
+}
+
+input:checked {
+    outline: 2px solid darkmagenta;
+}
+
+input[type="checkbox"]:checked {
+    outline: 3px solid darkorange;
+
+}
+
+#text {
+    display: none;
+
+}
+
+input:checked+#text {
+    display: block;
+}
+
+input:checked+label {
+    color: red;
+}
+
+input:checked~p {
+    color: goldenrod;
+}
+
+.wrapper1 {
+    font-size: 2em;
+    border: 2px solid #000;
+    width: 600px;
+}
+
+.box {
+    border: 1px solid red;
+    margin: 1rem;
+    opacity: 0.5;
+
+}
+
+.box.px {
+    width: 100px;
+
+}
+
+.box.vw {
+    width: 10vw;
+}
+
+.box.em {
+    width: 10em;
+}
+
+.ems li {
+    font-size: 1.3em;
+}
+
+.rems li {
+    font-size: 1.3rem;
+}
+
+.wrapper2 {
+    width: 400px;
+    border: 5px solid rebeccapurple;
+    border-top-right-radius: 10% 30%;
+}
+
+.px {
+    width: 200px;
+}
+
+.percent {
+    width: 40%;
+}
+
+.one {
+    background-color: rgba(101 121 129 /.3);
+}
+
+.two {
+    background-color: rgba(197 93 161 /.7);
+}
+
+.three {
+    background-color: rgba(18 138 125 /.9);
+}
+
+.wrapper1::after {
+    content: "texte écrire à travers CSS";
+}
+
+.wrapper2::after {
+    content: "texte écrire à travers CSS";
+}
+
+.box2 {
+    background-image: url(image2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*ou contain*/
+    background-position: top center;
+    /*ou background-position: top 20px right 10px; ou background-position: top 20px;*/
+    background-attachment: scroll;
+}
+
+section {
+    display: flex; /*disposition verticale flexbox*/
+    /*voir aussi block*/
+    width: auto;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    /*flex-flow: row wrap; joue le rôle des 2 précédents*/
+    
+}
+
+article {
+    flex: 200px;
+    height: 400px;
+    background-color: rgba(11, 2, 2, 0.884);
+    background-image: url(emoji.png);
+    background-size: 400px 400px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding: 1%;
+    overflow: auto;
+    color: #ffffff;
+}
+
+article pre {
+    height: 800px;
+}
+
+.fixed,
+.scroll {
+    margin-right: 1%;
+}
+
+.fixed {
+    background-attachment: fixed;
+}
+
+.scroll {
+    background-attachment: scroll;
+}
+
+.local {
+    background-attachment: local;
+}
+
+.horizontale {
+    inline-size: 50px;
+    writing-mode: horizontal-tb;
+    background-color: red;
+}
+
+.verticale {
+    writing-mode: vertical-rl;
+    background-color: yellow;
+    inline-size: 110px;
+
+}
+.box3 {
+    border: 1px solid #333333;
+    width: 100px;
+    height: 50px;
+    overflow: hidden;
+   
+  }
+
+  /* espacement */
+
+table {
+    table-layout: fixed;
+    width: 35%;
+    border-collapse: collapse;
+    border: 3px solid #333333;
+    border-collapse: separate;
+    background-image: url(leopardskin.jpg);
+  }
+  
+  thead th:nth-child(1) {
+    width: 30%;
+  }
+  
+  thead th:nth-child(2) {
+    width: 20%;
+  }
+  
+  thead th:nth-child(3) {
+    width: 15%;
+  }
+  
+  thead th:nth-child(4) {
+    width: 35%;
+  }
+  
+  th,
+  td {
+    padding: 20px;
+    border: 1px solid black;
+  }
+
+  tfoot{
+    font-family: "Rock Salt", cursive;
+    text-align: right;
+    text-shadow: 1px 1px 1px black;
+    background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.5)
+  );
+  border: 3px solid purple;
+  }
+  tbody,
+  tfoot{
+    text-align: center;
+    
+  }
+  tbody tr:nth-child(odd){ /*ou  nth-child(2n-1)*/
+    background-color: chocolate;
+  }
+  tbody tr:nth-child(even){ /*ou  nth-child(2n)*/
+    background-color: navajowhite;
+  }
+
+  thead,
+  tfoot{
+    color: #ffffff;
+    
+  }
+
+  caption {
+    font-family: "Rock Salt", cursive;
+    padding: 20px;
+    font-style: italic;
+    caption-side: bottom;
+    color: #666;
+    text-align: right;
+    letter-spacing: 1px;
+  }
+
+  em{
+    text-emphasis-style: sesame;
+    text-emphasis-color: red;
+  }
+  #exemple{
+    caret-color: deeppink;
+  }
+  
+  #column-rule{
+    column-count: 3;
+    column-rule-style: solid;
+    column-rule-color: blue;
+  }
+
+  #unevaleur {
+    border-color: red;
+  }
+  
+  #horzvert {
+    border-color: gold red;
+  }
+  
+  #hauthoribas {
+    border-color: red cyan gold;
+  }
+  
+  #hdbg {
+    border-color: red cyan black gold;
+    text-decoration: underline wavy #88ff88;
+  }
+  
+  /* Set width and style for all divs */
+  div {
+    border: solid 0em;
+    margin: 0.5em;
+    padding: 0.5em;
+    position: relative;
+    /*display: flex;*/
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  ul {
+    margin: 0;
+    list-style: none;
+  }
+
+  #box5 {
+    width: 500px;
+    height: 200px;
+    border: 2px solid rgb(245, 220, 225);
+    padding: 4px 6px;
+    font:
+      16px "Lucida Grande",
+      "Helvetica",
+      "Arial",
+      "sans-serif";
+  }
+  .ex1 {
+  margin: auto;
+  background: gold;
+  width: 66%;
+}
+.ex2 {
+  margin: 20px 0px 0 -20px;
+  background: gold;
+  width: 66%;
+}
+
+blockquote {
+    background-color: orange;
+    border: 2px solid blue;
+  }
+  
+  .fix-this {
+    all: unset;
+  }
+
+  /* 1. specificity: 1-0-1 */
+#outer a {
+    background-color: red;
+  }
+  
+  /* 2. specificity: 2-0-1 */
+  #outer #inner a {
+    background-color: blue;
+  }
+  
+  /* 3. specificity: 1-0-4 */
+  #outer div ul li a {
+    color: yellow;
+  }
+  
+  /* 4. specificity: 1-1-3 */
+  #outer div ul .nav a {
+    color: white;
+  }
+  
+  /* 5. specificity: 0-2-4 */
+  div div li:nth-child(2) a:hover {
+    border: 10px solid black;
+  }
+  
+  /* 6. specificity: 0-2-3 */
+  div li:nth-child(2) a:hover {
+    border: 10px dashed black;
+  }
+  
+  /* 7. specificity: 0-3-3 */
+  div div .nav:nth-child(2) a:hover {
+    border: 10px double black;
+  }
+  
+  a {
+    display: inline-block;
+    line-height: 40px;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+    width: 200px;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    padding: 0;
+  }
+  
+  li {
+    list-style-type: none;
+  }
+
+  /*les règles de spécificités*/
+  
+#winning {
+    background-color: red;
+    border: 1px solid black;
+  }
+  
+  .better {
+    background-color: gray;
+    border: none !important; /*c'est ce qui nous interesse*/
+  }
+  
+  /* On écrit le texte en rouge */
+.exemple {
+    color: red;
+  }
+  
+  /* Et on veut que le texte mis en avant
+     prenne la valeur initiale de
+     color */
+  .exemple em {
+    color: initial;
+  }
+
+  /*les positions relative, absolute, fixed, sticky*/
+  /*relative*/
+  .box6 {
+    display:inline-block;
+    width: 100px;
+    height: 100px;
+    background: red;
+    color: white;
+  }
+  
+  #deux {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    background: blue;
+  }
+  button:hover{
+    position: relative;
+    left: 10px;
+}
+  /*absolute*/
+  p {
+  /*background: aqua;
+  border: 3px solid blue;
+  */
+  padding: 10px;
+  margin: 10px;
+}
+
+span {
+  background: red;
+  border: 1px solid black;
+}
+
+.positioned {
+  position: absolute;
+  background: yellow;
+  border: 2px solid red;
+  top: 30px;
+  left: 30px;
+}
+
+/*fixed*/
+
+.box7 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    color: white;
+  }
+  
+  #un {
+    position: fixed;
+    top: 200px;
+    left: 10px;
+    background: blue;
+  }
+  
+  .outer {
+    width: 500px;
+    height: 300px;
+    overflow: scroll;
+    padding-left: 150px;
+  }
+
+  /*sticky*/
+  dl > div {
+    background: #fff;
+    padding: 24px 0 0 0;
+  }
+  
+  dt {
+    background: #b8c1c8;
+    border-bottom: 1px solid #989ea4;
+    border-top: 1px solid #717d85;
+    color: #fff;
+    font:
+      bold 18px/21px Helvetica,
+      Arial,
+      sans-serif;
+    margin: 0;
+    padding: 2px 0 0 12px;
+    position: -webkit-sticky;
+    position: sticky; /*c'est ce qui nous interesse*/
+    top: -1px;
+  }
+  
+  dd {
+    font:
+      bold 20px/45px Helvetica,
+      Arial,
+      sans-serif;
+    margin: 0;
+    padding: 0 0 0 12px;
+    white-space: nowrap;
+  }
+  
+  dd + dd {
+    border-top: 1px solid #ccc;
+  }
+  dl{
+    border: 3px solid #0078d7;
+    height: 500px;
+    overflow-y: scroll;
+    width: 500px;
+    text-align: center;
+    
+    
+  }
+/*multicolumn*/
+.container{
+   /*column-count: 3;*/ 
+   column-width: 200px;
+   column-rule: dotted; /* ou column-rule-style: double;*/
+   /*oubien-> column-rule: 4px dotted rgb(79, 185, 227); */
+   column-gap: 5px;
+
+}
+/*gestion de coupure de colonne d'une multicolonne*/
+.card {
+    break-inside: avoid; /*c'est ce qui nous interesse*/
+    page-break-inside: avoid; /*pour une meilleure prise en charge pour les différents navigateurs mais c'est obsolète*/
+    background-color: rgb(207, 232, 220);
+    border: 2px solid rgb(79, 185, 227);
+    padding: 10px;
+    margin: 0 0 1em 0;
+}
+
+/*les flottants*/
+.box8 {
+    /*
+    */
+    float: left;
+    margin-right: 15px; /*espace vide occupé par l'élément flotté*/
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    background-color: rgb(207, 232, 220);
+    padding: 1em;
+  }
+  .cleared{
+    clear: left; /*pour dégager le paragraphe de la ligne du floattant */
+  }
+
+  /*flexbox*/
+  button:first-child {
+    order: 1;
+  }
+
+  /*les grilles css*/
+  .container2{
+    display: grid;
+    /*grid-template-columns: 1fr 1fr 1fr;*/
+    grid-template-columns: repeat(3, 1fr);
+    /*grid-auto-rows: 100px;*/
+    grid-auto-rows: minmax(100px, auto);
+    gap: 2px;
+  }
+
+.container2 > div {
+            border-radius: 5px;
+            padding: 10px;
+            background-color: rgb(207,232,220);
+            border: 2px solid rgb(79,185,227);
+        }
+
+  
+  
+
+
+
+  
+  
